@@ -1,0 +1,8 @@
+node_modules
+dist
+.git
+.github
+.gitignore
+.eslint.config.mjs
+.data
+*.md
