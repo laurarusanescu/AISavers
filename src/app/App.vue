@@ -8,6 +8,9 @@
   </div>
 </template>
 
+
+
+
 <script lang="ts" setup>
 import LoadingScreen from '@components/misc/loading-screen/LoadingScreen.vue';
 import { useAppElement, useMediaQuery, useSquircle } from '@composables';
