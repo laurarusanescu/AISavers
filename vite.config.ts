@@ -7,7 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  envPrefix: ['OCULAR'],
+  envPrefix: ['AISAVER'],
   server: {
     port: 3000,
     proxy: {

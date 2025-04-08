@@ -1,10 +1,10 @@
 {
-  "name": "ocular",
+  "name": "aisaver",
   "private": true,
   "type": "module",
   "version": "0.0.0",
   "license": "MIT",
-  "author": "Simon Reinisch <contact@reinisch.io>",
+  "author": "",
   "packageManager": "pnpm@9.15.0",
   "engines": {
     "node": "^22"
