@@ -1,0 +1,1 @@
+import{B as e}from"./BudgetPane-Cem9czpC.js";import{aq as o}from"./YearToggle-Boe53fpQ.js";import{d as t,a,x as r,h as m,o as n}from"./index-h_7xmTiz.js";import"./Button-BP00bKSb.js";const l=t({__name:"Income",setup(c){return(p,s)=>(n(),a(e,{type:"income"},{title:r(()=>[m(o,{keyPath:"page.income.incomeFor"})]),_:1}))}});export{l as default};

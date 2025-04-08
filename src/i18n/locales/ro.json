@@ -1,0 +1,156 @@
+{
+  "navigation": {
+    "tools": {
+      "tools": "Unelte",
+      "changePassword": {
+        "change": "Schimbă parola",
+        "current": "Parola actuală",
+        "new": "Parola nouă",
+        "invalid": "Parola actuală este invalidă.",
+        "unknownError": "Ceva nu a mers bine, vă rugăm să încercați din nou mai târziu."
+      },
+      "copyPaste": {
+        "copy": "Copiază datele din {year}",
+        "paste": "Lipește datele din {from} în {to}",
+        "confirm": "Sigur doriți să copiați datele din {from} în {to}?"
+      },
+      "demo": {
+        "loadDemoData": "Încarcă date demonstrative"
+      },
+      "deleteYear": {
+        "delete": "Șterge {year}",
+        "confirm": "Sigur doriți să ștergeți {year}?"
+      },
+      "export": {
+        "export": "Exportă ca fișier json"
+      },
+      "import": {
+        "import": "Importă din fișier json",
+        "what": {
+          "google": "Fișier buget anual Google-Sheets",
+          "ocular": "Un fișier exportat anterior",
+          "title": "Ce doriți să importați?"
+        },
+        "ocular": {
+          "pickFile": "Selectați fișierul .json pentru import",
+          "import": "Importă date ocular"
+        },
+        "google": {
+          "import": "Importă date google",
+          "pickFile": "Selectați fișierul .csv pentru import",
+          "expenses": "Cheltuieli.csv",
+          "income": "Venituri.csv"
+        }
+      },
+      "privacyMode": {
+        "disable": "Comută la modul public",
+        "enable": "Comută la modul privat"
+      }
+    },
+    "theme": {
+      "change": "Schimbă tema de culori"
+    },
+    "year": {
+      "change": "Schimbă anul"
+    },
+    "auth": {
+      "title": "Autentificare",
+      "welcomeBack": "Bine ai revenit!",
+      "signIn": "Conectare",
+      "username": "Nume utilizator",
+      "password": "Parolă",
+      "loginFailed": "Conectare eșuată, nume utilizator și/sau parolă invalidă.",
+      "login": "Conectare",
+      "signup": "Înregistrare",
+      "createAccount": "Creează Cont",
+      "email": "Email",
+      "confirmPassword": "Confirmă Parola",
+      "passwordsDoNotMatch": "Parolele nu se potrivesc",
+      "signupFailed": "Înregistrarea a eșuat. Vă rugăm să încercați din nou.",
+      "unknownError": "Ceva nu a mers bine, vă rugăm să încercați din nou mai târziu",
+      "forgotPassword": "Ai uitat parola?",
+      "resetPassword": "Resetează Parola",
+      "resetPasswordSuccess": "Dacă există un cont cu acest email, veți primi instrucțiuni pentru resetarea parolei",
+      "backToLogin": "Înapoi la Conectare",
+      "rememberMe": "Ține-mă minte"
+    },
+    "admin": {
+      "settings": "Setări administrator",
+      "createUser": "Creează utilizator",
+      "username": "Nume utilizator",
+      "password": "Parolă",
+      "admin": "Administrator",
+      "conflict": "Un utilizator cu acest nume există deja.",
+      "error": "Ceva nu a mers bine, vă rugăm să încercați din nou mai târziu.",
+      "deleteUserConfirmation": "Sigur doriți să ștergeți acest utilizator?",
+      "manageUsers": "Gestionare utilizatori",
+      "noUsersFound": "Nu s-au găsit utilizatori..."
+    },
+    "settings": {
+      "settings": "Setări",
+      "language": "Limbă",
+      "currency": "Monedă",
+      "firstMonthOfYear": "Prima lună a anului",
+      "carryOverNetSavings": "Transferă economiile nete",
+      "carryOverNetSavingsInfo": "Dacă este activat, economiile nete din anul precedent vor fi transferate în anul următor.",
+      "showAnimationsAndTransitions": "Arată animații și tranziții"
+    },
+    "status": {
+      "synchronizationFailedDueToNetworkError": "Sincronizarea a eșuat din cauza unei erori de rețea!",
+      "retryingPleaseWait": "Se reîncearcă, vă rugăm așteptați...",
+      "retrySynchronization": "Reîncearcă sincronizarea"
+    }
+  },
+  "shared": {
+    "addGroup": "Adaugă Grup",
+    "append": "Mută \"{from}\" după \"{to}\"",
+    "average": "Medie",
+    "move": "Mută \"{from}\"",
+    "moveInto": "Mută \"{from}\" în \"{to}\"",
+    "prepend": "Mută \"{from}\" înainte de \"{to}\"",
+    "fillRow": "Completează rândul",
+    "fillRowToRight": "Completează spre dreapta",
+    "total": "Total",
+    "totals": "Totaluri",
+    "placeholder": "Începeți prin completarea filelor de venituri / cheltuieli! :)"
+  },
+  "page": {
+    "income": {
+      "title": "Venituri",
+      "incomeFor": "Venituri pentru {year}"
+    },
+    "expenses": {
+      "title": "Cheltuieli",
+      "expensesFor": "Cheltuieli pentru {year}"
+    },
+    "dashboard": {
+      "title": "Panou de control",
+      "tables": "Tabele",
+      "income": "Venituri",
+      "incomeTrend": "Tendință Venituri",
+      "allTime": "Prezentare generală",
+      "allTimeFromTo": "Total de la {from} până la {to}",
+      "expenses": "Cheltuieli",
+      "expensesTrend": "Tendință Cheltuieli",
+      "endingBalance": "Sold final",
+      "budgetFor": "Buget anual pentru {year}",
+      "remainingBalance": "Sold rămas până în {year}",
+      "netSavings": "Economii nete",
+      "yearInThePast": "Anul este în trecut",
+      "yearInTheFuture": "Anul este în viitor",
+      "yearEnding": "Acest an se apropie de sfârșit...",
+      "yoyIncomeGrowth": "Creștere anuală venituri",
+      "yoyExpenseGrowth": "Creștere anuală cheltuieli",
+      "allTimeIncome": "Venituri totale",
+      "allTimeExpenses": "Cheltuieli totale",
+      "allTimeSavings": "Economii totale",
+      "downloadAsPNG": "Descarcă ca PNG",
+      "downloadAsSVG": "Descarcă ca SVG",
+      "jumpToIncome": "Salt la venituri pentru {year}",
+      "jumpToExpenses": "Salt la cheltuieli pentru {year}",
+      "lastYear": "Anul trecut",
+      "surplus": "Surplus",
+      "deficit": "Deficit"
+    }
+  }
+} 
