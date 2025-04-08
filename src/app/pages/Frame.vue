@@ -26,6 +26,7 @@
 
       <template v-if="media !== 'mobile'">
         <SettingsButton :class="$style.btn" />
+        <InfoButton :class="$style.btn" />
       </template>
 
       <div :class="$style.divider" />
@@ -46,6 +47,7 @@
 <script lang="ts" setup>
 import AdminButton from './navigation/admin/AdminButton.vue';
 import CloudButton from './navigation/auth/CloudButton.vue';
+import InfoButton from './navigation/info/InfoButton.vue';
 import SettingsButton from './navigation/settings/SettingsButton.vue';
 import ThemeButton from './navigation/theme/ThemeButton.vue';
 import ToolsButton from './navigation/tools/ToolsButton.vue';
@@ -102,16 +104,33 @@ const buttons = computed((): FrameButton[] => [
   padding: 15px 10px;
   gap: 15px;
 
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+  .top {
+    margin-top: auto;
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
 
   .divider {
     width: 100%;
     height: 1px;
     background: var(--app-border);
+  }
+
+    .mobileDivider {
+      display: none;
+      width: 1px;
+      background: var(--app-border);
+      height: 100%;
+      margin: 0 -15px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
