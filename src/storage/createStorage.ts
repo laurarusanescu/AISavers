@@ -13,6 +13,7 @@ export const createStorage = () => {
 
   const logout = () => {
     authenticatedUser.value = undefined;
+    localStorage.removeItem('rememberedUser');
   };
 
   const store = createGenesisStore({
@@ -20,10 +21,30 @@ export const createStorage = () => {
     onSessionExpired: logout
   });
 
-  const login = async (user?: string, password?: string): Promise<boolean> =>
+  const login = async (user?: string, password?: string, rememberMe?: boolean): Promise<boolean> =>
     store
-      .login(user && password ? { user, password } : undefined)
-      .then((user) => (authenticatedUser.value = user))
+      .login(user && password ? { user, password, rememberMe } : undefined)
+      .then((user) => {
+        authenticatedUser.value = user;
+        if (rememberMe) {
+          localStorage.setItem('rememberedUser', user.name);
+        }
+        return true;
+      })
+      .catch(() => false);
+
+  const signup = async (username: string, email: string, password: string): Promise<boolean> =>
+    store
+      .signup({ username, email, password })
+      .then((user) => {
+        authenticatedUser.value = user;
+        return true;
+      })
+      .catch(() => false);
+
+  const resetPassword = async (email: string): Promise<boolean> =>
+    store
+      .resetPassword({ email })
       .then(() => true)
       .catch(() => false);
 
@@ -108,8 +129,11 @@ export const createStorage = () => {
     }
   });
 
-  // Check if user is logged in
-  void login();
+  // Check if user is logged in or has remembered credentials
+  const rememberedUser = localStorage.getItem('rememberedUser');
+  if (rememberedUser) {
+    void login();
+  }
 
   return {
     status,
@@ -121,6 +145,8 @@ export const createStorage = () => {
     updatePassword: store.updatePassword,
     retry,
     login,
+    signup,
+    resetPassword,
     logout,
     sync
   };

@@ -60,11 +60,25 @@
       "change": "Switch to a different year"
     },
     "auth": {
+      "title": "Authentication",
       "welcomeBack": "Welcome back!",
       "signIn": "Sign in",
       "username": "Username",
       "password": "Password",
-      "loginFailed": "Login failed, username and/or password invalid."
+      "loginFailed": "Login failed, username and/or password invalid.",
+      "login": "Login",
+      "signup": "Sign up",
+      "createAccount": "Create Account",
+      "email": "Email",
+      "confirmPassword": "Confirm Password",
+      "passwordsDoNotMatch": "Passwords do not match",
+      "signupFailed": "Sign up failed. Please try again.",
+      "unknownError": "Something went wrong, please try again later",
+      "forgotPassword": "Forgot Password?",
+      "resetPassword": "Reset Password",
+      "resetEmailSent": "If an account exists with this email, you will receive password reset instructions",
+      "backToLogin": "Back to Login",
+      "rememberMe": "Remember me"
     },
     "admin": {
       "settings": "Admin settings",
@@ -95,11 +109,11 @@
   },
   "shared": {
     "addGroup": "Add Group",
-    "append": "Move “{from}” after “{to}”",
+    "append": "Move \"{from}\" after \"{to}\"",
     "average": "Average",
-    "move": "Move “{from}”",
-    "moveInto": "Move “{from}” into “{to}”",
-    "prepend": "Move “{from}” before “{to}”",
+    "move": "Move \"{from}\"",
+    "moveInto": "Move \"{from}\" into \"{to}\"",
+    "prepend": "Move \"{from}\" before \"{to}\"",
     "fillRow": "Fill row",
     "fillRowToRight": "Fill to right",
     "total": "Total",

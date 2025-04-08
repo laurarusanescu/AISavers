@@ -28,16 +28,16 @@
   --c-dimmed-pure-hover: var(--c-dimmed-hover);
   --c-dimmed-shadow: #555c655c;
 
-  --c-primary: #202023;
-  --c-primary-light: #e8f0fb;
-  --c-primary-light-dimmed: #adc4e1;
-  --c-primary-hover: #2f2f34;
-  --c-primary-text: var(--c-text-light);
-  --c-primary-text-hover: var(--c-primary-text);
-  --c-primary-text-accent: #57749e;
-  --c-primary-pure: var(--c-primary);
-  --c-primary-pure-hover: var(--c-primary-hover);
-  --c-primary-shadow: #5077be5c;
+  --c-primary: #ffd700;
+  --c-primary-light: #fff3a0;
+  --c-primary-light-dimmed: #ffe97e;
+  --c-primary-hover: #ffcd00;
+  --c-primary-text: #000000;
+  --c-primary-text-hover: #000000;
+  --c-primary-text-accent: #000000;
+  --c-primary-pure: #ffd700;
+  --c-primary-pure-hover: #ffcd00;
+  --c-primary-shadow: #ffd7005c;
 
   --c-secondary: #f2e3ff;
   --c-secondary-light: var(--c-secondary);
@@ -161,8 +161,8 @@
   --grid-border-color: #e4e5e6;
   --grid-border-radius: var(--border-radius-l);
 
-  --grid-header-background: #1b1e2a;
-  --grid-header-text: #dfe2e8;
+  --grid-header-background: #ffd700;
+  --grid-header-text: #000000;
 
   --tooltip-backdrop: var(--context-menu-backdrop);
   --tooltip-shadow: 0 1px 2px #e0e0e0;

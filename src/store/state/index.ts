@@ -2,7 +2,7 @@ import { migrateApplicationState } from './migrator';
 import { AvailableCurrency, Budget, BudgetGroup, BudgetYear, DataState, DataStates, DataStateV1 } from './types';
 import { generateBudgetYearFromCurrent } from './utils/generators.ts';
 import { useTime } from '@composables';
-import { AvailableLocale, changeLocale } from '@i18n/index';
+import { AvailableLocale, i18n, changeLocale } from '@i18n/index';
 import { Storage } from '@storage/index';
 import { finalBalance } from '@store/state/utils/budgets.ts';
 import { moveInArrays, readFile, remove, sum, uuid } from '@utils';
@@ -38,9 +38,12 @@ export const createDataStore = (storage?: Storage) => {
     return [...currentYear.expenses, ...currentYear.income];
   };
 
+  // Handle locale changes
   watch(
-    () => [state.locale, state.currency] as [AvailableLocale, AvailableCurrency],
-    ([locale, currency]) => changeLocale(locale, { currency }),
+    () => state.locale,
+    (locale) => {
+      changeLocale(locale, { currency: state.currency });
+    },
     { immediate: true }
   );
 
@@ -142,6 +145,8 @@ export const createDataStore = (storage?: Storage) => {
 
     changeCurrency: (currency: AvailableCurrency) => {
       state.currency = currency;
+      // Update number format with new currency
+      changeLocale(state.locale, { currency });
     },
 
     setBudgetGroups: (target: Group, groups: BudgetGroup[]): void => {

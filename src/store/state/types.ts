@@ -29,7 +29,8 @@ export const availableCurrencies = [
   'HUF',
   'PLN',
   'CRC',
-  'IDR'
+  'IDR',
+  'RON'
 ];
 
 export type AvailableCurrency =
@@ -58,7 +59,8 @@ export type AvailableCurrency =
   | 'HUF'
   | 'PLN'
   | 'CRC'
-  | 'IDR';
+  | 'IDR'
+  | 'RON';
 
 export interface Budget {
   id: string;

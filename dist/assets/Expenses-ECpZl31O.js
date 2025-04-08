@@ -1,0 +1,1 @@
+import{B as e}from"./BudgetPane-Cem9czpC.js";import{aq as t}from"./YearToggle-Boe53fpQ.js";import{d as a,a as s,x as o,h as r,o as p}from"./index-h_7xmTiz.js";import"./Button-BP00bKSb.js";const d=a({__name:"Expenses",setup(n){return(m,c)=>(p(),s(e,{type:"expenses"},{title:o(()=>[r(t,{keyPath:"page.expenses.expensesFor"})]),_:1}))}});export{d as default};

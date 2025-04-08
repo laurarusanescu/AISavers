@@ -1,7 +1,20 @@
-import { SettingsStateV1, SettingsStateV2, SettingsStateV3, SettingsStateV4 } from './types';
+import { SettingsState, SettingsStateV1, SettingsStateV2, SettingsStateV3, SettingsStateV4 } from './types';
 import { createMigration, createMigrator } from 'yuppee';
 
 type Versions = SettingsStateV1 | SettingsStateV2 | SettingsStateV3 | SettingsStateV4;
+
+const defaultState = (): SettingsState => ({
+  version: 4,
+  general: {
+    monthOffset: 0,
+    carryOver: true
+  },
+  appearance: {
+    mode: 'normal',
+    theme: 'light',
+    animations: true
+  }
+});
 
 export const migrateSettingsState = createMigrator<SettingsStateV4, Versions>({
   init: () => {

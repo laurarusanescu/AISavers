@@ -1,10 +1,12 @@
 export interface GenesisUser {
   name: string;
+  email?: string;
   admin: boolean;
 }
 
 export interface NewGenesisUser {
   name: string;
+  email: string;
   password: string;
   admin: boolean;
 }
@@ -12,11 +14,22 @@ export interface NewGenesisUser {
 export interface GenesisLoginRequest {
   user: string;
   password: string;
+  rememberMe?: boolean;
+}
+
+export interface GenesisSignupRequest {
+  username: string;
+  email: string;
+  password: string;
 }
 
 export interface GenesisUpdatePasswordRequest {
   newPassword: string;
   currentPassword: string;
+}
+
+export interface GenesisResetPasswordRequest {
+  email: string;
 }
 
 export interface GenesisStoreOptions {
@@ -43,6 +56,26 @@ export const createGenesisStore = (opt: GenesisStoreOptions) => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(request)
         })
+      }),
+      true
+    );
+
+  const signup = async (request: GenesisSignupRequest): Promise<GenesisUser> =>
+    assertOk(
+      await fetch(`${opt.baseUrl}/signup`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(request)
+      }),
+      true
+    );
+
+  const resetPassword = async (request: GenesisResetPasswordRequest): Promise<void> =>
+    assertOk(
+      await fetch(`${opt.baseUrl}/reset-password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(request)
       }),
       true
     );
@@ -102,6 +135,8 @@ export const createGenesisStore = (opt: GenesisStoreOptions) => {
 
   return {
     login,
+    signup,
+    resetPassword,
     logout,
     updatePassword,
     getData,

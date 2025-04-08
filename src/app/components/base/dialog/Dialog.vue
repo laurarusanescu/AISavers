@@ -2,7 +2,10 @@
   <dialog ref="dialog" :class="classes" @transitionend="transitionEnd">
     <div :class="$style.backdrop" />
     <div ref="content" :class="[$style.content, contentClass]">
-      <h3 v-if="title" :class="$style.title">{{ title }}</h3>
+      <div :class="$style.header">
+        <h3 v-if="title" :class="$style.title">{{ title }}</h3>
+        <button :class="$style.closeButton" @click="emit('close')" aria-label="Close">×</button>
+      </div>
       <slot />
     </div>
   </dialog>
@@ -112,10 +115,42 @@ onMounted(() => {
   opacity: 0;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.closeButton {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
 .title {
   text-align: center;
   font-weight: var(--font-weight-l);
-  font-style: var(--font-size-m);
-  padding-bottom: 14px;
+  font-size: 2rem;
+  margin: 0;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <Button :class="classes" textual :color="color" :icon="icon" @click="auth" />
-  <LoginDialog :open="showLoginDialog" @close="showLoginDialog = false" />
+  <AuthDialog :open="showAuthDialog" @close="showAuthDialog = false" />
 </template>
 
 <script lang="ts" setup>
-import LoginDialog from './LoginDialog.vue';
+import AuthDialog from '@components/auth/AuthDialog.vue';
 import Button from '@components/base/button/Button.vue';
 import { Color } from '@composables';
 import { RiCloudLine, RiCloudOffLine, RiRefreshLine, RiSignalWifiErrorLine } from '@remixicon/vue';
@@ -18,7 +18,7 @@ const props = defineProps<{
 }>();
 
 const { status, logout } = useStorage();
-const showLoginDialog = ref(false);
+const showAuthDialog = ref(false);
 
 const classes = computed(() => props.class);
 
@@ -54,7 +54,7 @@ const color = computed((): Color => {
 
 const auth = () => {
   if (status.value === 'idle') {
-    showLoginDialog.value = true;
+    showAuthDialog.value = true;
   } else {
     logout();
   }
