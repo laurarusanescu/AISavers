@@ -48,11 +48,10 @@
       }
     },
     "info": {
-      "about": "About Ocular",
-      "github": "Check this project out on {link}, consider a {donation} to keep it alive!",
-      "madeWithLove": "Made with ❤️ by Simon",
-      "meta": "{version} / {date} / {sha}",
-      "donation": "donation"
+      "about": "About The Team",
+      "github": "Check this project out on {link}",
+      "madeWithLove": "Made with ❤️ by Laura, Radu & Cata",
+      "meta": "{date}"
     },
     "theme": {
       "change": "Change color theme"
