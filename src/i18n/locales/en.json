@@ -47,6 +47,12 @@
         "enable": "Switch to privacy mode"
       }
     },
+    "chatbot": {
+      "label": "AI Powered Financial Advisor \uD83E\uDD2F",
+      "title": "FinGPT \uD83C\uDF1F",
+      "placeholder": "Ask me anything...",
+      "send": "Send"
+    },
     "info": {
       "about": "About The Team",
       "github": "Check this project out on {link}",

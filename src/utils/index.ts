@@ -8,3 +8,4 @@ export * from './types';
 export * from './uuid';
 export * from './svgToPNG';
 export * from './cssVariables';
+export * from './chatgpt';

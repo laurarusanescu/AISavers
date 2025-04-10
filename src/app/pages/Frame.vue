@@ -18,6 +18,8 @@
         :name="button.name"
       />
 
+      <ChatbotButton :class="$style.btn" />
+
       <div v-if="media !== 'mobile'" style="flex-grow: 1" />
 
       <ToolsButton :class="$style.btn" />
@@ -61,6 +63,7 @@ import { useStorage } from '@storage/index';
 import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import type { Component } from 'vue';
+import ChatbotButton from "@app/pages/navigation/chatbot/ChatbotButton.vue";
 
 const menu = ref<HTMLDivElement>();
 const media = useMediaQuery();
