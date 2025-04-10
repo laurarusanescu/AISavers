@@ -57,8 +57,8 @@ export default defineConfig({
     }),
     VitePWA({
       manifest: {
-        name: 'Ocular',
-        short_name: 'Ocular',
+        name: 'AISaver',
+        short_name: 'AISaver',
         start_url: '/',
         display: 'standalone',
         orientation: 'any',
